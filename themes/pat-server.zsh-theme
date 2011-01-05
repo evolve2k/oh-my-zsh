@@ -26,7 +26,7 @@ function pat_prompt {
     prompt=" $prompt"
   done
   
-  prompt="%{%F{green}%}$PWD$prompt$(git_prompt_info)"
+  prompt="%{%F{magenta}%}$PWD$prompt$(git_prompt_info)"
   
   echo $prompt
 }
@@ -36,4 +36,4 @@ setopt prompt_subst
 PROMPT='
 %n@%m [%t]
 $(pat_prompt)
-%(?,%{%F{green}%},%{%F{red}%})>%{$reset_color%} '
+%(?,%{%F{magenta}%},%{%F{red}%})>%{$reset_color%} '
